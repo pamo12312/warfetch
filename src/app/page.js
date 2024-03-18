@@ -11,6 +11,7 @@ export default async function Home() {
     }));
 
 
+
     return (
         <div className={styles.container}>
             {countries.map((country, index) => (
