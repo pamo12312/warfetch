@@ -10,6 +10,7 @@ export default async function Home() {
         tld: country.tld ? country.tld[0] : 'N/A'
     }));
 
+
     return (
         <div className={styles.container}>
             {countries.map((country, index) => (
