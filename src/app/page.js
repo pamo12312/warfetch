@@ -7,7 +7,7 @@ export default async function Home() {
         name: country.name.common,
         flag: country.flags.svg,
         officialName: country.name.official,
-        tld: country.tld ? country.tld[0] : 'N/A'
+        tld: country.tld
     }));
 
 
@@ -22,7 +22,7 @@ export default async function Home() {
                     </div>
                     <p className={styles.officialName}>Official Name: {country.officialName}</p>
                     <p className={styles.tld}>Internet Domain: {country.tld}</p>
-                    <Link href={`/country/${country.name}`} >More Info</Link>
+                    <Link href={`${country.name}`} >More Info</Link>
 
                 </div>
             ))}
