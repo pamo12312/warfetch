@@ -1,13 +1,15 @@
-import { useRouter } from 'next/router';
 import styles from "@/app/page.module.css";
-export default function Country() {
-    const router = useRouter();
-    const { name, tld } = router.query;
+
+export default function Country({ name, tld }) {
     return (
         <div>
             <p className={styles.name}>Name: {name}</p>
-                <p>Internet Domain: {tld}</p>
-
+            <p>Internet Domain: {tld}</p>
         </div>
     );
+}
+
+export async function getServerSideProps(context) {
+    const { params } = context;
+    const { name, tld } = params;
 }
