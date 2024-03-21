@@ -1,5 +1,7 @@
 import styles from './page.module.css';
 import Link from 'next/link';
+
+
 export default async function Home() {
     const res = await fetch('https://restcountries.com/v3.1/all');
     const data = await res.json();
@@ -7,10 +9,10 @@ export default async function Home() {
         name: country.name.common,
         flag: country.flags.svg,
         officialName: country.name.official,
-        tld: country.tld
-    }));
-
-
+        tld: country.tld,
+        capital: country.capital,
+        population: country.population,
+            }));
 
     return (
         <div className={styles.container}>
@@ -23,7 +25,6 @@ export default async function Home() {
                     <p className={styles.officialName}>Official Name: {country.officialName}</p>
                     <p className={styles.tld}>Internet Domain: {country.tld}</p>
                     <Link href={`${country.name}`} >More Info</Link>
-
                 </div>
             ))}
         </div>

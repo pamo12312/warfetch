@@ -9,7 +9,4 @@ export default function Country({ name, tld }) {
     );
 }
 
-export async function getServerSideProps(context) {
-    const { params } = context;
-    const { name, tld } = params;
-}
+
