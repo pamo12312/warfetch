@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from './country/page.module.css';
+import styles from './page.module.css';
 
 export default async function CountryDetails({ params }) {
     const response = await fetch(`https://restcountries.com/v3.1/name/${params.name}`);
@@ -10,7 +10,6 @@ export default async function CountryDetails({ params }) {
     const flagDesc = data[0].flags.alt;
     const area = data[0].area;
     const population = data[0].population;
-
 
     return (
         <main>
