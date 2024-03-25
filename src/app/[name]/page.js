@@ -27,8 +27,9 @@ export default async function CountryDetails({ params }) {
                     </p>
                     <p>
                         <span>Population: {population}</span>
-                    </p>
+                    </p>   <Link href={`/`} >Back</Link>
                 </div>
+
             </div>
         </main>
 
