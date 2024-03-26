@@ -21,7 +21,7 @@ export default async function CountryDetails({ params }) {
                 <div className={styles.card}>
                     <h1>{name}</h1>
                     <p>
-                        <span>Official Nam: {officialName}</span>
+                        <span>Official Name: {officialName}</span>
                     </p>
                     <p>
                         <span>Flag Description: {flagDesc}</span>
