@@ -11,6 +11,10 @@ export default async function CountryDetails({ params }) {
     const area = data[0].area;
     const population = data[0].population;
 
+
+
+
+
     return (
         <main>
             <div className="card-container">
